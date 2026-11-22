@@ -26,7 +26,7 @@ jobs:
       - name: Accept Android SDK licenses
         run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
       - name: Build debug APK
-        run: ./gradlew --no-daemon :catalog:assembleDebug
+        run: bash ./gradlew --no-daemon :catalog:assembleDebug
       - name: Name the APK
         run: cp catalog/build/outputs/apk/debug/catalog-debug.apk Iris-Catalog.apk
       - name: Publish release
