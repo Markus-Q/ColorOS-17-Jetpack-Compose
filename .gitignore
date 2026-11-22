@@ -1,0 +1,21 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.kotlin/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Working files that stay on this computer
+TESTPLAN.md
+tools/inject/out/
+*.apk
+*.mp4
+*.log
+.DS_Store
+Thumbs.db
+FINDINGS.md
+tools/resflat.sh
+local/

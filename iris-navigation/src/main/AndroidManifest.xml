@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        The page host animates the back swipe with the finger (PredictiveBackHandler), which the system only allows for apps
+        that opted in to predictive back. Having it here means an app that uses the library needs nothing in its own
+        manifest. An app that sets the attribute to false itself adds tools:replace="android:enableOnBackInvokedCallback".
+    -->
+    <application android:enableOnBackInvokedCallback="true" />
+
+</manifest>
