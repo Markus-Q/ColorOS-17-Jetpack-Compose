@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/media/logo.png" width="120" alt="Iris UI Kit logo"></p>
+
 # Iris UI Kit (Jetpack Compose, ColorOS-style)
 
 A modular Jetpack Compose component library in the style of **ColorOS 17** (matched on a
@@ -325,6 +327,15 @@ class MainActivity : ComponentActivity() {
    use `PredictiveBackHandler` as usual: `BackEventCompat.touchX` is the real finger position then, and
    `event.travelFromEdge(widthPx)` gives the distance from the edge the swipe started at (the page slides to the right for
    both edges).
+
+## Star history
+
+<a href="https://star-history.com/#Markus-Q/ColorOS-17-Jetpack-Compose&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Markus-Q/ColorOS-17-Jetpack-Compose&type=Date&theme=dark">
+    <img alt="Star history chart" src="https://api.star-history.com/svg?repos=Markus-Q/ColorOS-17-Jetpack-Compose&type=Date" width="600">
+  </picture>
+</a>
 
 ## License
 
