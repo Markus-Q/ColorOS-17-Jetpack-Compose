@@ -23,10 +23,8 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - name: Android SDK 37
-        run: |
-          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
-          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37" "build-tools;37.0.0"
+      - name: Accept Android SDK licenses
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
       - name: Build debug APK
         run: ./gradlew --no-daemon :catalog:assembleDebug
       - name: Name the APK
