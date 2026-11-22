@@ -328,4 +328,4 @@ class MainActivity : ComponentActivity() {
 
 ## License
 
-Licensed under the Apache License, Version 2.0, see [LICENSE](LICENSE). ColorOS is a trademark of OPPO (see the note at the top).
+Copyright 2026 Markus-Q. Licensed under the Apache License, Version 2.0, see [LICENSE](LICENSE). ColorOS is a trademark of OPPO (see the note at the top).
