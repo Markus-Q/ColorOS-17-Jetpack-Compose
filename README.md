@@ -4,10 +4,6 @@
 
 A modular Jetpack Compose component library in the style of **ColorOS 17** (matched on a
 OnePlus 15, ColorOS 17.0.1 / Android 17), plus a **catalog app** that shows every component.
-The project layout mirrors the reference catalog from
-[Kyant0/AndroidLiquidGlass](https://github.com/Kyant0/AndroidLiquidGlass): library modules, then one
-catalog app with a home list of sections and one screen per component. Only the *layout* was taken
-as inspiration; no code or effects of that project are used.
 
 Keywords: Iris, ColorOS, ColorOS 17, ColorOS 17 style, ColorOS 17 UI, ColorOS-style Jetpack Compose UI kit, Android UI library.
 
