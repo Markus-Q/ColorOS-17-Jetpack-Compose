@@ -5,8 +5,6 @@
 A modular Jetpack Compose component library in the style of **ColorOS 17** (matched on a
 OnePlus 15, ColorOS 17.0.1 / Android 17), plus a **catalog app** that shows every component.
 
-Keywords: Iris, ColorOS, ColorOS 17, ColorOS 17 style, ColorOS 17 UI, ColorOS-style Jetpack Compose UI kit, Android UI library.
-
 > Not affiliated with or endorsed by OPPO or OnePlus. ColorOS is a trademark of OPPO; the name is only used to describe
 > the visual style this kit imitates. The repository contains no fonts, icons, images or other assets of OPPO.
 
