@@ -17,11 +17,24 @@ android {
         androidResources.localeFilters += arrayOf("en")
     }
 
+    // The release key comes from the environment (the release workflow sets it from GitHub secrets). Without it the
+    // release build is signed with the debug key, so that it still installs.
+    val releaseKeystore = System.getenv("RELEASE_KEYSTORE_FILE")
+    signingConfigs {
+        if (releaseKeystore != null) {
+            create("release") {
+                storeFile = file(releaseKeystore)
+                storePassword = System.getenv("RELEASE_KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("RELEASE_KEY_ALIAS")
+                keyPassword = System.getenv("RELEASE_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
-            // The demo app is signed with the debug key so that the release build installs without a keystore.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
         }
     }
     lint {

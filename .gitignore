@@ -19,3 +19,8 @@ Thumbs.db
 FINDINGS.md
 tools/resflat.sh
 local/
+
+# Signing keys must never be committed
+*.jks
+*.keystore
+*.p12
