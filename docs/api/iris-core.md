@@ -260,21 +260,7 @@ class SmoothRoundedCornerShape(
 ) : Shape
 ```
 
-<sub>Source: [IrisShapes.kt:31](../../iris-core/src/main/kotlin/dev/irisui/core/IrisShapes.kt#L31)</sub>
-
-### SmoothPillShape
-
-Stadium with squircle ends, for everything that is a "pill" in ColorOS: the bottom nav pill, buttons, tabs, search
-bars. A plain `RoundedCornerShape(percent = 50)` has circular ends; here every corner is a quarter of a superellipse
-`|x|^n + |y|^n = r^n` with the full radius r = half the short side. `exponent` 2 gives circular ends (the old
-pill), 3 the soft squircle ends of ColorOS, 4 and more get boxy. On a square it gives a round squircle.
-
-```kotlin
-@Immutable
-class SmoothPillShape(private val exponent: Float = 3f) : Shape
-```
-
-<sub>Source: [IrisShapes.kt:130](../../iris-core/src/main/kotlin/dev/irisui/core/IrisShapes.kt#L130)</sub>
+<sub>Source: [IrisShapes.kt:26](../../iris-core/src/main/kotlin/dev/irisui/core/IrisShapes.kt#L26)</sub>
 
 ### IrisShapes
 
@@ -289,11 +275,12 @@ class IrisShapes(
     val popup: Shape = SmoothRoundedCornerShape(23.dp),
     val dialog: Shape = SmoothRoundedCornerShape(30.dp),
     val sheet: Shape = SmoothRoundedCornerShape(32.dp, 32.dp, 0.dp, 0.dp),
-    val pill: Shape = SmoothPillShape(),
+    /** Fully rounded with circular ends (bottom nav pill, buttons, tabs, search bar); round buttons are circles. */
+    val pill: Shape = RoundedCornerShape(percent = 50),
 )
 ```
 
-<sub>Source: [IrisShapes.kt:171](../../iris-core/src/main/kotlin/dev/irisui/core/IrisShapes.kt#L171)</sub>
+<sub>Source: [IrisShapes.kt:120](../../iris-core/src/main/kotlin/dev/irisui/core/IrisShapes.kt#L120)</sub>
 
 ## IrisTheme.kt
 

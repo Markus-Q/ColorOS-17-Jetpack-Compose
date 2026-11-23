@@ -1,8 +1,7 @@
 package dev.irisui.core
 
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Immutable
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Outline
 import androidx.compose.ui.graphics.Path
@@ -11,13 +10,9 @@ import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.LayoutDirection
 import androidx.compose.ui.unit.dp
-import kotlin.math.PI
-import kotlin.math.abs
 import kotlin.math.cos
 import kotlin.math.max
 import kotlin.math.min
-import kotlin.math.pow
-import kotlin.math.sign
 import kotlin.math.sin
 import kotlin.math.sqrt
 import kotlin.math.tan
@@ -120,52 +115,6 @@ class SmoothRoundedCornerShape(
     }
 }
 
-/**
- * Stadium with squircle ends, for everything that is a "pill" in ColorOS: the bottom nav pill, buttons, tabs, search
- * bars. A plain `RoundedCornerShape(percent = 50)` has circular ends; here every corner is a quarter of a superellipse
- * `|x|^n + |y|^n = r^n` with the full radius r = half the short side. [exponent] 2 gives circular ends (the old
- * pill), 3 the soft squircle ends of ColorOS, 4 and more get boxy. On a square it gives a round squircle.
- */
-@Immutable
-class SmoothPillShape(private val exponent: Float = 3f) : Shape {
-    override fun createOutline(size: Size, layoutDirection: LayoutDirection, density: Density): Outline {
-        val w = size.width
-        val h = size.height
-        val r = min(w, h) / 2f
-        if (r < 0.5f) return Outline.Rectangle(Rect(Offset.Zero, size))
-
-        val power = 2.0 / exponent
-        val path = Path()
-        var first = true
-        fun quadrant(cx: Float, cy: Float, from: Double, to: Double) {
-            for (i in 0..Steps) {
-                val t = from + (to - from) * i / Steps
-                val c = cos(t)
-                val s = sin(t)
-                val x = cx + r * sign(c) * abs(c).pow(power)
-                val y = cy + r * sign(s) * abs(s).pow(power)
-                if (first) path.moveTo(x.toFloat(), y.toFloat()) else path.lineTo(x.toFloat(), y.toFloat())
-                first = false
-            }
-        }
-        // clockwise from the top of the right end; on a pill the two corners of one end meet in its middle
-        quadrant(w - r, r, -PI / 2, 0.0)
-        quadrant(w - r, h - r, 0.0, PI / 2)
-        quadrant(r, h - r, PI / 2, PI)
-        quadrant(r, r, PI, 3 * PI / 2)
-        path.close()
-        return Outline.Generic(path)
-    }
-
-    override fun equals(other: Any?): Boolean = other is SmoothPillShape && exponent == other.exponent
-
-    override fun hashCode(): Int = exponent.hashCode()
-
-    private companion object {
-        const val Steps = 28
-    }
-}
-
 /** Shape tokens. Radii were measured on a OnePlus 15 running ColorOS 17. */
 @Immutable
 class IrisShapes(
@@ -175,5 +124,6 @@ class IrisShapes(
     val popup: Shape = SmoothRoundedCornerShape(23.dp),
     val dialog: Shape = SmoothRoundedCornerShape(30.dp),
     val sheet: Shape = SmoothRoundedCornerShape(32.dp, 32.dp, 0.dp, 0.dp),
-    val pill: Shape = SmoothPillShape(),
+    /** Fully rounded with circular ends (bottom nav pill, buttons, tabs, search bar); round buttons are circles. */
+    val pill: Shape = RoundedCornerShape(percent = 50),
 )

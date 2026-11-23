@@ -49,7 +49,6 @@ Theme, colors, typography, shapes, motion, icons, overlay host. Package `dev.iri
 | [`IrisEasing`](iris-core.md#iriseasing) | Easing curves used by the transitions of the kit. |
 | [`IrisMotion`](iris-core.md#irismotion) | Animation specs shared by every component so the whole kit moves the same way. |
 | [`SmoothRoundedCornerShape`](iris-core.md#smoothroundedcornershape) | Rounded rectangle with "continuous" (squircle) corners, the corner style ColorOS and iOS use. |
-| [`SmoothPillShape`](iris-core.md#smoothpillshape) | Stadium with squircle ends, for everything that is a "pill" in ColorOS: the bottom nav pill, buttons, tabs, search bars. |
 | [`IrisShapes`](iris-core.md#irisshapes) | Shape tokens. |
 | [`LocalColorOSColors`](iris-core.md#localcoloroscolors) | Colors of the current theme (the dark palette outside a `IrisTheme`); read them through `IrisTheme.colors`. |
 | [`LocalColorOSTypography`](iris-core.md#localcolorostypography) | Typography of the current theme; read it through `IrisTheme.typography`. |
