@@ -175,7 +175,7 @@ Card, list item, grouped list, section header, divider. Package `dev.irisui.cont
 
 | Declaration | What it is |
 | --- | --- |
-| [`IrisRedDot`](iris-content.md#irisreddot) | Red dot that hints at something new (no number): 8 dp, the destructive container red. |
+| [`IrisRedDot`](iris-content.md#irisreddot) | Red dot that hints at something new (no number): 8 dp, the destructive container red, a round squircle. |
 | [`IrisBadge`](iris-content.md#irisbadge) | Red badge with a count: a pill at least 16 dp high with white digits (11 sp); counts above `max` read "max+". |
 | [`IrisCard`](iris-content.md#iriscard) | Rounded surface for grouping content. |
 | [`IrisListItem`](iris-content.md#irislistitem) | A row as used throughout ColorOS Settings: optional leading icon, title with an optional summary, a trailing value / chevron / custom control. |

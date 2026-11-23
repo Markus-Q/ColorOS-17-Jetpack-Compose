@@ -5,7 +5,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -15,10 +14,10 @@ import androidx.compose.ui.unit.sp
 import dev.irisui.core.IrisText
 import dev.irisui.core.IrisTheme
 
-/** Red dot that hints at something new (no number): 8 dp, the destructive container red. */
+/** Red dot that hints at something new (no number): 8 dp, the destructive container red, a round squircle. */
 @Composable
 fun IrisRedDot(modifier: Modifier = Modifier, color: Color = IrisTheme.colors.destructiveContainer) {
-    Box(modifier.size(8.dp).background(color, CircleShape))
+    Box(modifier.size(8.dp).background(color, IrisTheme.shapes.pill))
 }
 
 /**
@@ -35,7 +34,7 @@ fun IrisBadge(
     Box(
         modifier
             .defaultMinSize(minWidth = 16.dp, minHeight = 16.dp)
-            .background(color, CircleShape)
+            .background(color, IrisTheme.shapes.pill)
             .padding(horizontal = if (label.length > 1) 5.dp else 0.dp),
         contentAlignment = Alignment.Center,
     ) {

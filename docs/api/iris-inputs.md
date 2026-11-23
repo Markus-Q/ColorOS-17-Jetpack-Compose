@@ -229,7 +229,7 @@ fun IrisTextField(
 )
 ```
 
-<sub>Source: [TextFields.kt:60](../../iris-inputs/src/main/kotlin/dev/irisui/inputs/TextFields.kt#L60)</sub>
+<sub>Source: [TextFields.kt:59](../../iris-inputs/src/main/kotlin/dev/irisui/inputs/TextFields.kt#L59)</sub>
 
 ### IrisUnderlineTextField
 
@@ -256,7 +256,7 @@ fun IrisUnderlineTextField(
 )
 ```
 
-<sub>Source: [TextFields.kt:143](../../iris-inputs/src/main/kotlin/dev/irisui/inputs/TextFields.kt#L143)</sub>
+<sub>Source: [TextFields.kt:142](../../iris-inputs/src/main/kotlin/dev/irisui/inputs/TextFields.kt#L142)</sub>
 
 ### IrisSearchBar
 
@@ -277,5 +277,5 @@ fun IrisSearchBar(
 )
 ```
 
-<sub>Source: [TextFields.kt:243](../../iris-inputs/src/main/kotlin/dev/irisui/inputs/TextFields.kt#L243)</sub>
+<sub>Source: [TextFields.kt:242](../../iris-inputs/src/main/kotlin/dev/irisui/inputs/TextFields.kt#L242)</sub>
 

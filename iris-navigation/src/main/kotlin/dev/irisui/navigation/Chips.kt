@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -85,7 +84,7 @@ fun IrisChip(
                     .align(Alignment.TopEnd)
                     .offset(x = (-4).dp, y = 2.dp)
                     .size(9.dp)
-                    .clip(CircleShape)
+                    .clip(IrisTheme.shapes.pill)
                     .background(colors.destructiveContainer),
             )
         }

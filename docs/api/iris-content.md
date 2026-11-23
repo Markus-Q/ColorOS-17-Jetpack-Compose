@@ -8,14 +8,14 @@ Package `dev.irisui.content`. Card, list item, grouped list, section header, div
 
 ### IrisRedDot
 
-Red dot that hints at something new (no number): 8 dp, the destructive container red.
+Red dot that hints at something new (no number): 8 dp, the destructive container red, a round squircle.
 
 ```kotlin
 @Composable
 fun IrisRedDot(modifier: Modifier = Modifier, color: Color = IrisTheme.colors.destructiveContainer)
 ```
 
-<sub>Source: [Badge.kt:20](../../iris-content/src/main/kotlin/dev/irisui/content/Badge.kt#L20)</sub>
+<sub>Source: [Badge.kt:19](../../iris-content/src/main/kotlin/dev/irisui/content/Badge.kt#L19)</sub>
 
 ### IrisBadge
 
@@ -31,7 +31,7 @@ fun IrisBadge(
 )
 ```
 
-<sub>Source: [Badge.kt:28](../../iris-content/src/main/kotlin/dev/irisui/content/Badge.kt#L28)</sub>
+<sub>Source: [Badge.kt:27](../../iris-content/src/main/kotlin/dev/irisui/content/Badge.kt#L27)</sub>
 
 ## Card.kt
 

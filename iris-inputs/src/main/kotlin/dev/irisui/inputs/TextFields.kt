@@ -33,7 +33,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
@@ -192,7 +191,7 @@ fun IrisUnderlineTextField(
                             Modifier
                                 .padding(start = 10.dp)
                                 .size(18.dp)
-                                .clip(CircleShape)
+                                .clip(IrisTheme.shapes.pill)
                                 .background(colors.content.copy(alpha = 0.6f))
                                 .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {
                                     onValueChange("")

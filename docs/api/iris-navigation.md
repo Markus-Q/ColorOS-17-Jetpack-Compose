@@ -111,7 +111,7 @@ fun IrisChip(
 )
 ```
 
-<sub>Source: [Chips.kt:43](../../iris-navigation/src/main/kotlin/dev/irisui/navigation/Chips.kt#L43)</sub>
+<sub>Source: [Chips.kt:42](../../iris-navigation/src/main/kotlin/dev/irisui/navigation/Chips.kt#L42)</sub>
 
 ### IrisChipRow
 
@@ -127,7 +127,7 @@ fun IrisChipRow(
 )
 ```
 
-<sub>Source: [Chips.kt:100](../../iris-navigation/src/main/kotlin/dev/irisui/navigation/Chips.kt#L100)</sub>
+<sub>Source: [Chips.kt:99](../../iris-navigation/src/main/kotlin/dev/irisui/navigation/Chips.kt#L99)</sub>
 
 ## PageTransitions.kt
 
