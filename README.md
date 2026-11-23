@@ -26,45 +26,6 @@ Keywords: Iris, ColorOS, ColorOS 17, ColorOS 17 style, ColorOS 17 UI, ColorOS-st
 | [API reference](docs/api/README.md) | Every public declaration with its documentation and signature, generated from the source |
 | Guides | [Theming](docs/theming.md) · [Touch, drag, haptics and overscroll](docs/touch-and-drag.md) · [Glass and blur](docs/glass-and-blur.md) · [Navigation](docs/navigation.md) · [Popups](docs/popups.md) · [FAQ](docs/faq.md) |
 
-## Screenshots
-
-Taken on the phone (OnePlus 15, ColorOS 17.0.1) from the catalog app: the same screens in the dark and in the light theme
-(`--ez light true`). The status bar is cropped.
-
-**Dark**
-
-<table>
-<tr>
-<td align="center"><img src="docs/media/screens/home-dark.png" width="185" alt="Catalog home"><br><sub>Home</sub></td>
-<td align="center"><img src="docs/media/screens/nav-pill-dark.png" width="185" alt="Bottom nav pill"><br><sub>Bottom nav pill</sub></td>
-<td align="center"><img src="docs/media/screens/icon-button-dark.png" width="185" alt="Icon buttons"><br><sub>Icon buttons</sub></td>
-<td align="center"><img src="docs/media/screens/slider-dark.png" width="185" alt="Sliders"><br><sub>Sliders</sub></td>
-</tr>
-<tr>
-<td align="center"><img src="docs/media/screens/switch-dark.png" width="185" alt="Switches"><br><sub>Switches</sub></td>
-<td align="center"><img src="docs/media/screens/popup-menu-dark.png" width="185" alt="Popup menu"><br><sub>Popup menu</sub></td>
-<td align="center"><img src="docs/media/screens/dialog-dark.png" width="185" alt="Dialog"><br><sub>Dialog</sub></td>
-<td align="center"><img src="docs/media/screens/bottom-sheet-dark.png" width="185" alt="Bottom sheet"><br><sub>Bottom sheet</sub></td>
-</tr>
-</table>
-
-**Light**
-
-<table>
-<tr>
-<td align="center"><img src="docs/media/screens/home-light.png" width="185" alt="Catalog home, light"><br><sub>Home</sub></td>
-<td align="center"><img src="docs/media/screens/nav-pill-light.png" width="185" alt="Bottom nav pill, light"><br><sub>Bottom nav pill</sub></td>
-<td align="center"><img src="docs/media/screens/icon-button-light.png" width="185" alt="Icon buttons, light"><br><sub>Icon buttons</sub></td>
-<td align="center"><img src="docs/media/screens/slider-light.png" width="185" alt="Sliders, light"><br><sub>Sliders</sub></td>
-</tr>
-<tr>
-<td align="center"><img src="docs/media/screens/switch-light.png" width="185" alt="Switches, light"><br><sub>Switches</sub></td>
-<td align="center"><img src="docs/media/screens/popup-menu-light.png" width="185" alt="Popup menu, light"><br><sub>Popup menu</sub></td>
-<td align="center"><img src="docs/media/screens/dialog-light.png" width="185" alt="Dialog, light"><br><sub>Dialog</sub></td>
-<td align="center"><img src="docs/media/screens/bottom-sheet-light.png" width="185" alt="Bottom sheet, light"><br><sub>Bottom sheet</sub></td>
-</tr>
-</table>
-
 ## In motion
 
 Recorded on the phone itself (dark mode). The grey circle under the finger is drawn by the catalog app
@@ -106,6 +67,45 @@ the catalog has its own recording, see [Recordings](docs/recordings.md).
 <td align="center" valign="top"><img src="docs/media/dialog.gif" width="190" alt="Dialog"><br><sub><b>Dialog</b><br>docked glass card over a dimmed page, its buttons drag</sub></td>
 <td align="center" valign="top"><img src="docs/media/bottom-sheet.gif" width="190" alt="Bottom sheet"><br><sub><b>Bottom sheet</b><br>rubber band when pulled up, springs back unless it was pulled past half its height</sub></td>
 <td align="center" valign="top"><img src="docs/media/drag-free-reorder.gif" width="190" alt="Free drag and re-order"><br><sub><b>Free drag and re-order</b><br><code>physicsDrag()</code> lifts and tilts, <code>ReorderableColumn</code> moves the others out of the way</sub></td>
+</tr>
+</table>
+
+## Screenshots
+
+Taken on the phone (OnePlus 15, ColorOS 17.0.1) from the catalog app: the same screens in the dark and in the light theme
+(`--ez light true`). The status bar is cropped.
+
+**Dark**
+
+<table>
+<tr>
+<td align="center"><img src="docs/media/screens/home-dark.png" width="185" alt="Catalog home"><br><sub>Home</sub></td>
+<td align="center"><img src="docs/media/screens/nav-pill-dark.png" width="185" alt="Bottom nav pill"><br><sub>Bottom nav pill</sub></td>
+<td align="center"><img src="docs/media/screens/icon-button-dark.png" width="185" alt="Icon buttons"><br><sub>Icon buttons</sub></td>
+<td align="center"><img src="docs/media/screens/slider-dark.png" width="185" alt="Sliders"><br><sub>Sliders</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="docs/media/screens/switch-dark.png" width="185" alt="Switches"><br><sub>Switches</sub></td>
+<td align="center"><img src="docs/media/screens/popup-menu-dark.png" width="185" alt="Popup menu"><br><sub>Popup menu</sub></td>
+<td align="center"><img src="docs/media/screens/dialog-dark.png" width="185" alt="Dialog"><br><sub>Dialog</sub></td>
+<td align="center"><img src="docs/media/screens/bottom-sheet-dark.png" width="185" alt="Bottom sheet"><br><sub>Bottom sheet</sub></td>
+</tr>
+</table>
+
+**Light**
+
+<table>
+<tr>
+<td align="center"><img src="docs/media/screens/home-light.png" width="185" alt="Catalog home, light"><br><sub>Home</sub></td>
+<td align="center"><img src="docs/media/screens/nav-pill-light.png" width="185" alt="Bottom nav pill, light"><br><sub>Bottom nav pill</sub></td>
+<td align="center"><img src="docs/media/screens/icon-button-light.png" width="185" alt="Icon buttons, light"><br><sub>Icon buttons</sub></td>
+<td align="center"><img src="docs/media/screens/slider-light.png" width="185" alt="Sliders, light"><br><sub>Sliders</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="docs/media/screens/switch-light.png" width="185" alt="Switches, light"><br><sub>Switches</sub></td>
+<td align="center"><img src="docs/media/screens/popup-menu-light.png" width="185" alt="Popup menu, light"><br><sub>Popup menu</sub></td>
+<td align="center"><img src="docs/media/screens/dialog-light.png" width="185" alt="Dialog, light"><br><sub>Dialog</sub></td>
+<td align="center"><img src="docs/media/screens/bottom-sheet-light.png" width="185" alt="Bottom sheet, light"><br><sub>Bottom sheet</sub></td>
 </tr>
 </table>
 
