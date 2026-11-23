@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -36,68 +35,17 @@ import dev.irisui.core.IrisIcons
 import dev.irisui.core.IrisText
 import dev.irisui.core.IrisTheme
 import dev.irisui.effects.IrisHaptic
-import dev.irisui.effects.GlassDefaults
 import dev.irisui.effects.HapticSource
 import dev.irisui.effects.LocalColorOSHaptics
 import dev.irisui.effects.ReorderableColumn
-import dev.irisui.effects.backdropSource
-import dev.irisui.effects.glass
 import dev.irisui.effects.persistentGlow
 import dev.irisui.effects.TouchMotionMath
 import dev.irisui.effects.physicsDrag
-import dev.irisui.effects.rememberBackdrop
 import dev.irisui.effects.touchGlow
 import dev.irisui.effects.touchMotion
 import dev.irisui.inputs.IrisSlider
 import dev.irisui.inputs.IrisSwitch
-import dev.irisui.navigation.IrisBackButton
-import dev.irisui.navigation.IrisScaffold
 import dev.irisui.navigation.IrisSegmentedTabs
-import dev.irisui.navigation.IrisTopBar
-import kotlin.math.roundToInt
-
-@Composable
-fun BlurBackgroundDemo(onBack: () -> Unit) {
-    var kind by remember { mutableIntStateOf(0) }
-    var scale by remember { mutableFloatStateOf(1f) }
-    IrisScaffold(
-        topBar = { IrisTopBar(title = "Blur background", navigationIcon = { IrisBackButton(onBack) }) },
-    ) { _ ->
-        val backdrop = rememberBackdrop()
-        Box(Modifier.fillMaxSize()) {
-            DemoWallpaper(Modifier.fillMaxSize().backdropSource(backdrop))
-            val stock = when (kind) {
-                0 -> GlassDefaults.popup()
-                1 -> GlassDefaults.dialog()
-                2 -> GlassDefaults.bottomSheet()
-                else -> GlassDefaults.bottomBar()
-            }
-            val style = stock.copy(material = stock.material?.let { it.copy(blur = it.blur * scale) })
-            val shape = when (kind) {
-                0 -> IrisTheme.shapes.popup
-                1 -> IrisTheme.shapes.dialog
-                2 -> IrisTheme.shapes.sheet
-                else -> IrisTheme.shapes.pill
-            }
-            Column(
-                Modifier
-                    .align(Alignment.Center)
-                    .padding(24.dp)
-                    .fillMaxWidth()
-                    .physicsDrag()
-                    .glass(shape, style, backdrop)
-                    .padding(22.dp),
-                verticalArrangement = Arrangement.spacedBy(10.dp),
-            ) {
-                IrisText("Glass panel", style = IrisTheme.typography.title)
-                Caption("Drag me over the wallpaper. The stock ColorOS materials: blur plus colour layers that keep the hue of what is behind.")
-                IrisSegmentedTabs(listOf("Popup", "Dialog", "Sheet", "Pill"), kind, { kind = it })
-                IrisText("Blur ×${"%.1f".format(scale)}", style = IrisTheme.typography.bodySmall)
-                IrisSlider(scale, { scale = it }, valueRange = 0f..2f)
-            }
-        }
-    }
-}
 
 /** A touchable tile that shows the scale ColorOS shrinks an element of this size to. */
 @Composable

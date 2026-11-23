@@ -6,7 +6,7 @@
 # (tap the button, screenshot) and copied to docs/media/catalog/{dark,light}.
 # The dark shots show the system theme, so run it with the phone in dark mode (the script never changes the setting).
 . "$(dirname "$0")/lib.sh"
-LIST="BottomNavPill TopBar LargeTitle SegmentedTabs PageTransitions PrimaryButton SecondaryButton IconButton RoundPlusButton TextButton Switch TextField SearchBar Checkbox Slider Progress Card ListItem GroupedList SectionHeader Divider Badge BlurBackground BlurLab PressAnimation Haptics TouchGlow PersistentGlow DragPhysics PreferencesExample HabitsExample TypeScale"
+LIST="BottomNavPill TopBar LargeTitle SegmentedTabs PageTransitions PrimaryButton SecondaryButton IconButton RoundPlusButton TextButton Switch TextField SearchBar Checkbox Slider Progress Card ListItem GroupedList SectionHeader Divider Badge BlurLab PressAnimation Haptics TouchGlow PersistentGlow DragPhysics PreferencesExample HabitsExample TypeScale"
 if [ "$1" = "convert" ]; then
   for theme in dark light; do
     mkdir -p "$ROOT/docs/media/catalog/$theme"

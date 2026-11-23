@@ -2,7 +2,6 @@ package dev.irisui.catalog
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import dev.irisui.catalog.demos.BlurBackgroundDemo
 import dev.irisui.catalog.demos.BadgeDemo
 import dev.irisui.catalog.demos.BlurLabDemo
 import dev.irisui.catalog.demos.ProgressDemo
@@ -113,7 +112,6 @@ private fun DemoScreen(destination: CatalogDestination, onBack: () -> Unit, onPu
         CatalogDestination.BottomSheet -> BottomSheetDemo(onBack)
         CatalogDestination.PopupMenu -> PopupMenuDemo(onBack)
 
-        CatalogDestination.BlurBackground -> BlurBackgroundDemo(onBack)
         CatalogDestination.BlurLab -> BlurLabDemo(onBack)
         CatalogDestination.PressAnimation -> PressAnimationDemo(onBack)
         CatalogDestination.Haptics -> HapticsDemo(onBack)

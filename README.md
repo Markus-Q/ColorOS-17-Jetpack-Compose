@@ -77,7 +77,6 @@ the catalog has its own recording, see [Recordings](docs/recordings.md).
 <tr>
 <td align="center" valign="top"><img src="docs/media/drag-physics.gif" width="250" alt="Drag physics"><br><sub><b>Drag physics</b><br>shrinks while held, follows the finger with rubber-band resistance, springs back with an overshoot</sub></td>
 <td align="center" valign="top"><img src="docs/media/press-animation.gif" width="250" alt="Press animation"><br><sub><b>Press animation</b><br>everything shrinks while held, small and wide things by different amounts</sub></td>
-<td align="center" valign="top"><img src="docs/media/icon-buttons.gif" width="250" alt="Liquid Glass buttons"><br><sub><b>Glass buttons</b><br>round glass and filled buttons stretch toward the finger and spring back</sub></td>
 </tr>
 <tr>
 <td align="center" valign="top"><img src="docs/media/slider.gif" width="250" alt="Sliders"><br><sub><b>Sliders</b><br>a light follows the thumb; stepped sliders trail the finger and catch up at every dot</sub></td>
@@ -86,7 +85,6 @@ the catalog has its own recording, see [Recordings](docs/recordings.md).
 </tr>
 <tr>
 <td align="center" valign="top"><img src="docs/media/popup-menu.gif" width="250" alt="Popup menu"><br><sub><b>Popup menu</b><br>glass panel scaling out of the corner nearest its anchor, rows light up while pressed</sub></td>
-<td align="center" valign="top"><img src="docs/media/blur-glass.gif" width="250" alt="Glass material"><br><sub><b>Glass material</b><br>the popup, dialog, sheet and pill recipes (blur plus two blend layers) over a wallpaper</sub></td>
 <td align="center" valign="top"><img src="docs/media/checkbox.gif" width="250" alt="Checkbox"><br><sub><b>Checkbox</b><br>the tick draws itself, "select all" follows the rows</sub></td>
 </tr>
 <tr>
@@ -252,7 +250,7 @@ dodge or lum), `tint` (top bar), `split` (reference overlay).
 
 Navigation (bottom nav pill, top bar, collapsing large title, segmented tabs, page transitions), buttons, inputs
 (switch, text field, search bar, checkbox, slider, progress), content (card, list item, grouped list, section header,
-divider, badge), popups (dialog, bottom sheet, popup menu) and effects (blur background, blur lab, press animation,
+divider, badge), popups (dialog, bottom sheet, popup menu) and effects (blur lab, press animation,
 haptics, touch glow, persistent glow, drag physics). The **Example screens** at the end put the components together
 into whole pages (a settings page, a habit tracker with a sheet, the type scale). Every demo can be
 opened directly with `--es destination NAME`; `--ez light true` shows the kit in its light theme whatever the system theme

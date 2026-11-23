@@ -42,7 +42,6 @@ enum class CatalogDestination(val section: CatalogSection, val title: String) {
     BottomSheet(CatalogSection.Popups, "Bottom sheet"),
     PopupMenu(CatalogSection.Popups, "Popup menu"),
 
-    BlurBackground(CatalogSection.Effects, "Blur background"),
     BlurLab(CatalogSection.Effects, "Blur lab"),
     PressAnimation(CatalogSection.Effects, "Press animation"),
     Haptics(CatalogSection.Effects, "Haptics"),

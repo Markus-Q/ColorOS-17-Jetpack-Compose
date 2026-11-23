@@ -473,13 +473,11 @@ public class DocGen {
         RECORDINGS.put("LargeTitle", new String[]{"large-title.gif"});
         RECORDINGS.put("SegmentedTabs", new String[]{"segmented-tabs.gif"});
         RECORDINGS.put("PageTransitions", new String[]{"page-back-swipe.gif"});
-        RECORDINGS.put("IconButton", new String[]{"icon-buttons.gif"});
         RECORDINGS.put("Switch", new String[]{"switch.gif"});
         RECORDINGS.put("Slider", new String[]{"slider.gif"});
         RECORDINGS.put("Dialog", new String[]{"dialog.gif"});
         RECORDINGS.put("BottomSheet", new String[]{"bottom-sheet.gif"});
         RECORDINGS.put("PopupMenu", new String[]{"popup-menu.gif"});
-        RECORDINGS.put("BlurBackground", new String[]{"blur-glass.gif"});
         RECORDINGS.put("PressAnimation", new String[]{"press-animation.gif"});
         RECORDINGS.put("Checkbox", new String[]{"checkbox.gif"});
         RECORDINGS.put("TouchGlow", new String[]{"touch-glow.gif"});
@@ -492,7 +490,6 @@ public class DocGen {
         "BottomNavPill", "Tap, or slide a finger across the pill",
         "TopBar", "Glass top bar with a back button, a centred title and actions",
         "LargeTitle", "A large title that collapses into the top bar while the list scrolls under it",
-        "BlurBackground", "The stock glass materials over a wallpaper: drag the panel, pick the material, change the blur",
         "BlurLab", "Tune a glass material over any background and read its numbers",
         "HabitsExample", "A tracker page: card with a progress ring, tabs, a checklist, a bottom pill and a sheet to add an item",
         "TypeScale", "Every text style of the theme with its name, size and weight");

@@ -2,8 +2,6 @@
 
 <table>
 <tr>
-<td align="center" valign="top"><img src="media/blur-glass.gif" width="240" alt="Glass material"><br><sub>Popup, dialog, sheet and pill material over a wallpaper</sub></td>
-<td align="center" valign="top"><img src="media/catalog/dark/BlurBackground.png" width="200" alt="Blur background, dark"><br><sub>Blur background</sub></td>
 <td align="center" valign="top"><img src="media/catalog/dark/BlurLab.png" width="200" alt="Blur lab, dark"><br><sub>Blur lab</sub></td>
 </tr>
 </table>

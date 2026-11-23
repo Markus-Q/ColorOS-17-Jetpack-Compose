@@ -4,7 +4,6 @@
 <tr>
 <td align="center" valign="top"><img src="media/press-animation.gif" width="240" alt="Press animation"><br><sub>Press animation</sub></td>
 <td align="center" valign="top"><img src="media/drag-physics.gif" width="240" alt="Drag physics"><br><sub>Drag physics</sub></td>
-<td align="center" valign="top"><img src="media/icon-buttons.gif" width="240" alt="Glass buttons"><br><sub>Glass buttons</sub></td>
 </tr>
 </table>
 
