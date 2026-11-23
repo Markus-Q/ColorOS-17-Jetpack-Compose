@@ -116,7 +116,7 @@ circular corners, 0.55 the soft ColorOS look).
 | `popup` | 23 dp |
 | `dialog` | 30 dp |
 | `sheet` | 32 dp on the top corners only |
-| `pill` | Fully rounded with circular ends (bottom nav pill, buttons, tabs, search bar); round buttons are circles |
+| `pill` | Fully rounded: `SmoothPillShape`, round ends (within 1.5 px of a circle on a 56 dp pill) whose curvature grows smoothly into the straight edge, so there is no visible join; round buttons are circles |
 
 ## Motion
 

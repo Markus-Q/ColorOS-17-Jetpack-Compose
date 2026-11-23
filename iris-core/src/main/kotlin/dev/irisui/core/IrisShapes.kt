@@ -1,6 +1,5 @@
 package dev.irisui.core
 
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Outline
@@ -115,6 +114,26 @@ class SmoothRoundedCornerShape(
     }
 }
 
+/**
+ * Pill with full round ends whose curvature grows smoothly: a plain `RoundedCornerShape(percent = 50)` is tangent to the
+ * straight edge, but its curvature jumps from 0 to 1 / radius right at the join, and the eye sees a faint corner there.
+ * The ends of this shape are the continuous (squircle) corner with a small [smoothing]: the corner radius is half the
+ * short side divided by `1 + smoothing`, so the smoothed corners just meet in the middle of the end. With 0.08 the
+ * outline stays within 1.5 px of a circle on a 56 dp pill, but there is no visible join. 0 gives circular ends.
+ */
+@Immutable
+class SmoothPillShape(private val smoothing: Float = 0.08f) : Shape {
+    override fun createOutline(size: Size, layoutDirection: LayoutDirection, density: Density): Outline {
+        val radiusPx = min(size.width, size.height) / 2f / (1f + smoothing)
+        val radius = with(density) { radiusPx.toDp() }
+        return SmoothRoundedCornerShape(radius, smoothing).createOutline(size, layoutDirection, density)
+    }
+
+    override fun equals(other: Any?): Boolean = other is SmoothPillShape && smoothing == other.smoothing
+
+    override fun hashCode(): Int = smoothing.hashCode()
+}
+
 /** Shape tokens. Radii were measured on a OnePlus 15 running ColorOS 17. */
 @Immutable
 class IrisShapes(
@@ -124,6 +143,6 @@ class IrisShapes(
     val popup: Shape = SmoothRoundedCornerShape(23.dp),
     val dialog: Shape = SmoothRoundedCornerShape(30.dp),
     val sheet: Shape = SmoothRoundedCornerShape(32.dp, 32.dp, 0.dp, 0.dp),
-    /** Fully rounded with circular ends (bottom nav pill, buttons, tabs, search bar); round buttons are circles. */
-    val pill: Shape = RoundedCornerShape(percent = 50),
+    /** Fully rounded with smooth ends (bottom nav pill, buttons, tabs, search bar); round buttons are circles. */
+    val pill: Shape = SmoothPillShape(),
 )
