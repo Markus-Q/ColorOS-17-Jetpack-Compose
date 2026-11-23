@@ -25,10 +25,10 @@ jobs:
           java-version: 17
       - name: Accept Android SDK licenses
         run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
-      - name: Build debug APK
-        run: bash ./gradlew --no-daemon :catalog:assembleDebug
+      - name: Build the optimized APK (signed with the debug key)
+        run: bash ./gradlew --no-daemon :catalog:assembleRelease
       - name: Name the APK
-        run: cp catalog/build/outputs/apk/debug/catalog-debug.apk Iris-Catalog.apk
+        run: cp catalog/build/outputs/apk/release/catalog-release.apk Iris-Catalog.apk
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
@@ -40,4 +40,5 @@ jobs:
           body: |
             Catalog app of the Iris UI kit (alpha). Download `Iris-Catalog.apk` below and install it on an Android phone
             (Android 8+, blur needs Android 12+). Allow installs from this source when asked.
-            The APK is signed with the debug key.
+            The APK is the optimized (release) build, signed with the debug key. Uninstall an older version first if Android
+            refuses to update it.

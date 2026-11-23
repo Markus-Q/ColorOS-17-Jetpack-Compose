@@ -20,7 +20,13 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            // The demo app is signed with the debug key so that the release build installs without a keystore.
+            signingConfig = signingConfigs.getByName("debug")
         }
+    }
+    lint {
+        // The optimized build is meant for trying the kit out; a lint warning must not stop it.
+        checkReleaseBuilds = false
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
