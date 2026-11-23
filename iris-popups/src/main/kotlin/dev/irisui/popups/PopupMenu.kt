@@ -357,14 +357,20 @@ fun IrisMenuItem(
     }
 }
 
-/** Gap between groups of rows: 12 dp high with a 4 dp band in 8 % black. */
+/** Gap between groups of rows: 8 dp high with a thin, 1 dp line in the theme's divider colour (grey in both themes). */
 @Composable
 fun IrisMenuDivider(modifier: Modifier = Modifier) {
     Box(
         modifier
             .fillMaxWidth()
-            .height(12.dp)
-            .padding(vertical = 4.dp)
-            .background(Color.Black.copy(alpha = 0.08f)),
-    )
+            .height(8.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Box(
+            Modifier
+                .fillMaxWidth()
+                .height(1.dp)
+                .background(IrisTheme.colors.divider),
+        )
+    }
 }

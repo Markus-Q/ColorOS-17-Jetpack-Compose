@@ -197,7 +197,7 @@ Dialog, bottom sheet, popup menu. Package `dev.irisui.popups`.
 | [`IrisPopupHost`](iris-popups.md#irispopuphost) | Wrap the whole app (or one screen) in this host. |
 | [`IrisPopupMenuBox`](iris-popups.md#irispopupmenubox) | Anchors a popup menu to `anchor`. |
 | [`IrisMenuItem`](iris-popups.md#irismenuitem) | One row of a popup menu: 40 dp high, text 20 dp from the panel edge (15 sp). |
-| [`IrisMenuDivider`](iris-popups.md#irismenudivider) | Gap between groups of rows: 12 dp high with a 4 dp band in 8 % black. |
+| [`IrisMenuDivider`](iris-popups.md#irismenudivider) | Gap between groups of rows: 8 dp high with a thin, 1 dp line in the theme's divider colour (grey in both themes). |
 
 ## [iris-ui](iris-ui.md)
 
