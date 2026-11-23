@@ -357,20 +357,18 @@ fun IrisMenuItem(
     }
 }
 
-/** Gap between groups of rows: 8 dp high with a thin, 1 dp line in the theme's divider colour (grey in both themes). */
+/**
+ * Divider between groups of rows: the same hairline as the dividers of lists and menus ([IrisTheme] divider colour, one
+ * device pixel high), inset by the 20 dp side padding of the rows.
+ */
 @Composable
 fun IrisMenuDivider(modifier: Modifier = Modifier) {
+    val hairline = with(LocalDensity.current) { 1f.toDp() }
     Box(
         modifier
             .fillMaxWidth()
-            .height(8.dp),
-        contentAlignment = Alignment.Center,
-    ) {
-        Box(
-            Modifier
-                .fillMaxWidth()
-                .height(1.dp)
-                .background(IrisTheme.colors.divider),
-        )
-    }
+            .padding(horizontal = 20.dp)
+            .height(hairline)
+            .background(IrisTheme.colors.divider),
+    )
 }

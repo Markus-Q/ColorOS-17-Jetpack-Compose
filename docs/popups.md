@@ -111,7 +111,7 @@ IrisPopupMenuBox(
 * `IrisMenuItem` is one 40 dp row (`icon`, `checked` and `destructive` are optional) and closes the menu after `onClick`.
   Pressing, sliding the finger over the rows and selecting is handled by the panel itself, so rows have no touch feedback of
   their own.
-* `IrisMenuDivider` is the 8 dp gap between groups of rows, with a thin grey line in the middle.
+* `IrisMenuDivider` is the hairline between groups of rows, the same as the dividers of lists and menus, inset by the 20 dp side padding of the rows.
 * `centerOnScreen = true` is for a menu opened from a full-width list row (a dropdown preference): the panel is centered on the
   screen and its top edge sits at the vertical center of the row.
 

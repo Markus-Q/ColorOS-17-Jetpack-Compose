@@ -132,12 +132,13 @@ fun IrisMenuItem(
 
 ### IrisMenuDivider
 
-Gap between groups of rows: 8 dp high with a thin, 1 dp line in the theme's divider colour (grey in both themes).
+Divider between groups of rows: the same hairline as the dividers of lists and menus (`IrisTheme` divider colour, one
+device pixel high), inset by the 20 dp side padding of the rows.
 
 ```kotlin
 @Composable
 fun IrisMenuDivider(modifier: Modifier = Modifier)
 ```
 
-<sub>Source: [PopupMenu.kt:362](../../iris-popups/src/main/kotlin/dev/irisui/popups/PopupMenu.kt#L362)</sub>
+<sub>Source: [PopupMenu.kt:365](../../iris-popups/src/main/kotlin/dev/irisui/popups/PopupMenu.kt#L365)</sub>
 
