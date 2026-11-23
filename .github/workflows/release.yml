@@ -48,6 +48,15 @@ jobs:
         run: bash ./gradlew --no-daemon :catalog:assembleRelease
       - name: Name the APK
         run: cp catalog/build/outputs/apk/release/catalog-release.apk Iris-Catalog.apk
+      - name: Release notes
+        run: |
+          TAG="${{ github.event.inputs.tag || github.ref_name }}"
+          FILE=".github/release-notes/$TAG.md"
+          if [ -f "$FILE" ]; then
+            cp "$FILE" "$RUNNER_TEMP/notes.md"
+          else
+            printf '%s\n' 'Catalog app of the Iris UI kit (alpha). Download `Iris-Catalog.apk` below and install it on an Android phone (Android 8+, blur needs Android 12+). Allow installs from this source when asked.' > "$RUNNER_TEMP/notes.md"
+          fi
       - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
@@ -56,11 +65,7 @@ jobs:
           prerelease: false
           make_latest: true
           files: Iris-Catalog.apk
-          body: |
-            Catalog app of the Iris UI kit (alpha). Download `Iris-Catalog.apk` below and install it on an Android phone
-            (Android 8+, blur needs Android 12+). Allow installs from this source when asked.
-            This is the optimized release build. Uninstall an older version first if Android refuses to update it
-            (the signing key changed).
+          body_path: ${{ runner.temp }}/notes.md
       - name: Remove other APKs from the release
         env:
           GH_TOKEN: ${{ github.token }}
